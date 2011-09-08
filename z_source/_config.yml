@@ -1,0 +1,4 @@
+destination :   temp/stage1
+source      :   source
+markdown    :   maruku
+permalink   :   none
