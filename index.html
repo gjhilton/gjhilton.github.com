@@ -10,7 +10,6 @@
 	<meta name="description" content="gjhilton &amp; hltn co. Research in performance, scenography and technology.">
 	<meta name="author" content="gjhilton">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<link rel="stylesheet" href="stylesheets/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/layout.css">
@@ -27,10 +26,29 @@
 			{font-size: 18px; line-height:24px; padding-top:27px; padding-bottom:27px;}
 		div.sixteen.columns.notop
 			{padding-top:0px;}
+		div.eight.columns.alpha
+			{line-height:0;}
 		.caption, .caption strong
-			{text-align:right; color: #666; font-style: italic}
+			{text-align:right; color: #999; font-style: italic}
 		h6
-			{font-weight:bold;}
+			{font-weight:bold;} 
+		.gig
+			{background: #e5e5ee; background: rgba(229,229,238,0.3); margin-bottom:4px;}
+		.desc
+			{padding-top:20px;}
+		
+		@media only screen and (max-width: 767px) {
+				div.sixteen.columns
+					{padding-bottom:0;}
+				div.sixteen.columns.notop
+					{padding-top:27px;}
+				aside
+					{display:none;}
+				.gig
+					{background: #e5e5ee; margin-bottom:4px;}
+				.gig
+			{background: #fff; margin-bottom:0;}
+			}
 	</style>
 
 	<!--[if lt IE 9]>
@@ -50,7 +68,7 @@
 				<p>We engineer abnormal, beautiful, provocative events, experiences and environments.<br> We want to collaborate with you. <a href="http:twitter.com/hltn">Hello. Pleased to meet you.</a></p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha"><img src="images/kzmr.jpg" alt=""/></div>
 			<div class="eight columns desc">
 				<h6>Autonomous robotic follow spot operators (2012)</h6>
@@ -58,7 +76,7 @@
 				<p>Teaching old hardware new tricks in collaboration with <a href="">the Kazimier</a>. Ancient moving-head lighting fixtures are retrofitted with real-time human tracking capabilities, transforming them into inhumanly-precise interactive partners. <a href="http://github.com/gjhilton/ed209">[sourcecode available on github]</a></p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha"><img src="images/kng.gif" alt=""/></div>
 			<div class="eight columns desc">
 				<h6>Attack ships on fire (2012)</h6>
@@ -66,7 +84,7 @@
 				<p>Choreographic and technology research into what ballet looks like when the intended audience is a computer vision system.</p>			
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha"><img src="images/ndls.gif" alt=""/></div>
 			<div class="eight columns desc">
 				<h6><strike>Endless (2013)</strike></h6>
@@ -82,20 +100,18 @@
 	<section id="transmissions">
 		<div class="container">
 			<div class="sixteen columns notop">
-				<h1>Transmissions</h1>
-				<h3>Choreography / Direction</h3>
+				<h2>Transmissions</h2>
+				<h3>Choreography / Scenography</h3>
 			</div>
 		</div>
-		<div class="container">
-			<div class="eight columns alpha">
-				<img src="images/ahf1.jpg" alt=""/>
-			</div>
+		<div class="container gig">
+			<div class="eight columns alpha"><img src="images/ahf1.jpg" alt=""/></div>
 			<div class="eight columns desc">
 				<h6>...aber hauptsaechlich Fragezeichen (2005)</h6>
 				<p>Unfinished short film. Performed by Tryste Wilber.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/3cl.jpg" alt=""/>
 			</div>
@@ -105,7 +121,7 @@
 				<p>Performed by Mark Edward, Kema T. Ekpei, Emma Bateman, Ruth McCall.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/tbe.jpg" alt=""/>
 			</div>
@@ -115,7 +131,7 @@
 				<p>Performed by Joanne Fong, Julia Griffin, Debbie Milner. Original music by Nic Endo (Atari Teenage Riot).</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/ntf.jpg" alt=""/>
 			</div>
@@ -131,7 +147,7 @@
 				<p>In addition to guesting with other companies, gjh has established an occasional solo contemporary performance practice encompassing obsessive-compulsive matchstick-puppetry recreations of vintage Chaplin and Gene Kelly routines, and the epic collision of a 40-piece choir with several hundred kilos of glitter and a rock-stadium confetti cannon.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/igc.jpg" alt=""/>
 			</div>
@@ -141,7 +157,7 @@
 				<p>Performed by G.J.Hilton, Nicola Potts, and the Manchester Bach Choir.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/fom.jpg" alt=""/>
 			</div>
@@ -156,52 +172,58 @@
 				<h3>Scenography / Installation</h3>
 			</div>
 		</div>	
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/tw.jpg" alt=""/> 
 			</div>
 			<div class="eight columns desc">
-				<h6>Touch Wood (2007)</h6><em>for Sue MacLennan</em>, The Place, London.</div>
+				<h6>Touch Wood (2007)</h6>
+				<p><em>for Sue MacLennan</em>, The Place, London.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/gst.jpg" alt=""/>
 			</div>
 			<div class="eight columns desc">
-				<h6>Augustine (2007)</h6><em>for Darkin Ensemble</em>, UK tour.</div>
+				<h6>Augustine (2007)</h6>
+				<p><em>for Darkin Ensemble</em>, UK tour.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/jsb.jpg" alt=""/>
 			</div>
 			<div class="eight columns desc">
-				<h6>Just Seconds Before (2006)</h6><em>for EDge</em>, UK &amp; European tour.</div>
+				<h6>Just Seconds Before (2006)</h6>
+				<p><em>for EDge</em>, UK &amp; European tour.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/dsg.jpg" alt=""/>
 			</div>
 			<div class="eight columns desc">
-				<h6>Disgo (2006)</h6><em>for Darkin Ensemble</em>, Place Prize, London.</div>
+				<h6>Disgo (2006)</h6>
+				<p><em>for Darkin Ensemble</em>, Place Prize, London.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/wnt.jpg" alt=""/>
 			</div>
 			<div class="eight columns desc">
-				<h6>Winterspace (2003-5)</h6><em>for Igloo</em>, world tour.</div>
+				<h6>Winterspace (2003-5)</h6>
+				<p><em>for Igloo</em>, world tour.</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container gig">
 			<div class="eight columns alpha">
 				<img src="images/rgx.gif" alt=""/>
 			</div>
 			<div class="eight columns desc">
-				<h6>GRGX (2000)</h6>Palais des Festivals, Cannes.</div>
+				<h6>GRGX (2000)</h6>
+				<p>Palais des Festivals, Cannes.</p>
 			</div>
 		</div>
 		<div class="container">
@@ -224,7 +246,7 @@
 				<h6>2003</h6>
 				<h6>ArtSLAB</h6><p><em>with Idea</em>  Deaf &amp; Dumb Institute, Manchester.</p>
 			</div>
-			<div class="eight columns desc">
+			<div class="eight columns">
 				<h6>2002</h6>
 				<h6>Software for Dancers</h6><p><em>with Scott DeLaHunta, Ashley Page, Shobana Jeyasingh, Siobhan Davies, Wayne McGregor, Chris Ziegler, Ade Ward, Bruno Martelli, Sanjoy Roy</em> Sadlers Wells, London.</p>
 				<h6>1998</h6>
