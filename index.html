@@ -11,8 +11,125 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
  
 	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<style>
+
+/* 
+MINI SKEL3TON adapted by gjh 
+from www.getskeleton.com
+================================================== */
+
+    .container                                  { position: relative; margin: 0 auto; padding: 0; }
+    .container .column,
+    .container .columns                         { float: left; display: inline; }
+    .row                                        { margin-bottom: 20px; }
+
+/* #Large screen: Design for a width of 1280
+================================================== */
+
+@media only screen and (min-width: 1300px) {
+	.container                                  { width: 1280px; }
+	.container .column                          { margin-left: 40px; margin-right: 40px; }
+
+	.container .single.column:first-child,
+	.container .single.column:last-child        { margin-left:0; margin-right:0; }
+	.container .single.column:first-child       { margin-left:0; }
+	.container .double.column:last-child        { margin-right:0; }
+    .container .single.column                   { width: 400px; }
+    .container .double.column                   { width: 840px; }
+	.container .triple.column                   { width: 1280px; margin-left:0; margin-right:0; }
+}
+
+/* #Standard 960 grid: Design for a width of 1024
+================================================== */
+
+@media only screen and (min-width: 960px) and (max-width: 1299px) {
+	.container                                  { width: 960px; }
+	.container .column                          { margin-left: 10px; margin-right: 10px; }
+
+    .container .single.column                   { width: 300px; }
+    .container .double.column                   { width: 620px; }
+	.container .triple.column                   { width: 940px; }
+} 
+
+
+/* #Tablet (Portrait): Design for a width of 768px
+================================================== */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .container                                  { width: 768px; }
+        .container .column                          { margin-left: 10px; margin-right: 10px;  }
+
+        .container .single.column                   { width: 236px; }
+        .container .double.column                   { width: 492px; }
+        .container .triple.column                   { width: 748px; }
+    }
+
+
+/*  #Mobile (Portrait): Design for a width of 320px
+================================================== */
+
+    @media only screen and (max-width: 767px) {
+        .container                                  { width: 300px; }
+        .container .column                         { margin: 0; }
+
+        .container .single.column,
+        .container .double.column,
+        .container .single.column                   { width: 300px; }
+    }
+
+
+/* #Mobile (Landscape): Design for a width of 480px
+================================================== */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .container                                  { width: 420px; }
+        .container .column                          { margin: 0; }
+
+        .container .single.column,
+        .container .double.column,
+        .container .triple.column                   { width: 420px; }
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+	
+/* 
+Site styles
+================================================== */
+	
 body
 	{background: #cfd2d2;}
 body, h1, h2, h3, h4, h5, a, a:visited, a:hover, strong
@@ -30,11 +147,17 @@ a:hover
 img
 	{max-width:100%;}
 .caption
-	{width: 280px; position:relative; top: -66px; color: #fff; background:#000; background: rgba(0,0,0,0.8); z-index: 5; padding:12px; line-height: 18px; margin-bottom:-60px;}
+	{min-width: 280px; width:70%; position:relative; top: -66px; color: #fff; background:#000; background: rgba(0,0,0,0.8); z-index: 5; padding:12px; line-height: 18px; margin-bottom:-60px;}
 .caption a
 	{color: #fff;}
+
+#archive
+    {background: #eee; color: #aaa; margin-top:24px; padding:24px 0}	
+#archive h1, #archive h2, #archive h3, #archive h4, #archive h5, #archive h6
+    {color: #aaa}
 footer
 	{margin-top:18px !important; margin-bottom:18px !important; font-size:10px; line-height:12px;}
+	
 	</style>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -81,6 +204,41 @@ footer
 			</div>
 		</div>
 	</article>
+	
+    <div id="archive">
+	<article class="container">
+	   <div class="row" style="margin-bottom:14px">
+			<div class="triple column">
+				<h3>Selected earlier work</h3>
+			</div>
+		</div>
+		<div class="row unspaced">
+			<div class="triple column">
+				<img src="images/1280_igc.jpg" />
+				<div class="caption">Impromptu (2008)<br>Performers: gjh with Manchester Bach Choir.</div>
+			</div>
+		</div>
+		<div class="row unspaced">
+			<div class="triple column">
+				<img src="images/1280_frag.jpg" />
+				<div class="caption">...aber hauptsaechlich Fragezeichen (2005 - unfinished)<br>Performer: Tryste Wilber.</div>
+			</div>
+		</div>
+		<div class="row unspaced">
+			<div class="triple column">
+				<img src="images/1280_3cl3.jpg" />
+				<div class="caption">3clips3 (2003) Deaf &amp; Dumb Institute, Manchester<br>Performers: Mark Edward, Kema T. Ekpei, Emma Bateman, Ruth McCall.</div>
+			</div>
+		</div>
+		<div class="row unspaced">
+			<div class="triple column">
+				<img src="images/1280_ntfr.jpg" />
+				<div class="caption">Interference (2002) greenroom, Manchester<br>Performers: Ruth Gibson, Julia Griffin, Grace Surman. Music: Tom Williams, cello: Francis-Marie Uitti.</div>
+			</div>
+		</div>
+	</article>
+    </div>
+    
 	<footer class="container">
 		<div class="row unspaced">
 			<div class="triple column">
